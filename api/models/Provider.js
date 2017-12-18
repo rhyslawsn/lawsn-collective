@@ -5,7 +5,7 @@
 * @docs        :: http://sailsjs.org/#!documentation/models
 */
 
-module.exports = {
+/*module.exports = {
 
   attributes: {
     name: {
@@ -30,5 +30,5 @@ module.exports = {
       via: 'provider'
     }
   }
-};
+};*/
 

@@ -5,7 +5,7 @@
 * @docs        :: http://sailsjs.org/#!documentation/models
 */
 
-var bcrypt = require('bcryptjs');
+/*var bcrypt = require('bcryptjs');
 
 module.exports = {
   attributes: {
@@ -80,5 +80,5 @@ module.exports = {
       return;
     });
   },
-};
+};*/
 

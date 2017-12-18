@@ -5,7 +5,7 @@
 * @docs        :: http://sailsjs.org/#!documentation/models
 */
 
-module.exports = {
+/*module.exports = {
   attributes: {
 
 
@@ -102,4 +102,4 @@ module.exports = {
     return callback();
   },
 };
-
+*/
