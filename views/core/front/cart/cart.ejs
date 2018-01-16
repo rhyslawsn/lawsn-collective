@@ -1,14 +1,12 @@
 <%include ../templates.navbar.ejs%>
 
-<br><br>
+<div class="container" style="margin-left: 100px;">
 
-<div class="container">
-
-    <h3 style="color:forestgreen"><i class="fa fa-fw fa-shopping-cart" aria-hidden="true"></i> <%= __('Cart') %> <a href="/cart/clear" class="btn btn-warning pull-right"> <%= __('Empty Cart') %> </a></h3>
+    <h3 style="color:black"><i class="fa fa-fw fa-shopping-cart" aria-hidden="true"></i> <%= __('Cart') %> <a href="/cart/clear" class="btn btn-warning pull-right"> <%= __('Empty Cart') %> </a></h3>
     <hr/>
 
     <% if (cart.length <= 0) { %>
-    <h3><%= __('Your shopping cart is currently empty') %></h3>
+    <center><h3><%= __('Your shopping cart is currently empty') %></h3></center>
     <% } else { %>
     <div class="row clearfix">
         <div class="col-lg-12">
@@ -39,14 +37,14 @@
 
                             <option value="1">1</option>
                             <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4 </option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8 </option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
+                            <option value="3">3</option>
+                            <option value="4">4 </option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8 </option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
 
                         </select>
 

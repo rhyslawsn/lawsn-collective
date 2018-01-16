@@ -11,9 +11,9 @@
 
             var product_id = $(this).data('id');
 
-            var quantityId = 'quantity-'+product_id;
+            var quantityId = 'quantity-' + product_id;
 
-            var quantity = $('#'+quantityId).find(":selected").text();
+            var quantity = $('#' + quantityId).find(":selected").text();
 
             console.log('quantity', quantity);
 
@@ -21,18 +21,14 @@
 
             if ($(this).data('role') === 'buy') {
                 loc = '/cart';
-
-            }
-            else{
+            }else{
                 alert('Product Added');
-
             }
 
             $.ajax({
                 type: 'GET',
                 url: '/cart/add/' + product_id + '?quantity=' + quantity,
                 success: function (data, status) {
-
                     window.location = loc;
                     return;
                 },
@@ -44,3 +40,19 @@
         }
     });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+<script href="/slideout/dist/slideout.min.js">
+  var slideout = new Slideout({
+    'panel': document.getElementById('panel'),
+    'menu': document.getElementById('menu'),
+    'padding': 256,
+    'tolerance': 70
+  });
+
+  var $slide = $('button[data-role="slide"]');
+
+  // Toggle button 
+  document.querySelector('.toggle-button').addEventListener('click', function() {
+    slideout.toggle();
+  });
+</script> 

@@ -4,6 +4,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -182,6 +183,7 @@ optgroup {
 table {
   border-spacing: 0;
   border-collapse: collapse;
+  width: 50%;
 }
 td,
 th {
@@ -1586,6 +1588,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  object-position: center;
 }
 @media (min-width: 768px) {
   .container {
@@ -1611,12 +1614,13 @@ pre code {
 .row {
   margin-right: -15px;
   margin-left: -15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -1774,7 +1778,7 @@ pre code {
 .col-xs-offset-0 {
   margin-left: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 50px) {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
   }
@@ -1801,9 +1805,6 @@ pre code {
   }
   .col-sm-5 {
     width: 41.66666667%;
-  }
-  .col-sm-4 {
-    width: 33.33333333%;
   }
   .col-sm-3 {
     width: 25%;
@@ -1932,9 +1933,12 @@ pre code {
     margin-left: 0;
   }
 }
-@media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+@media (min-width: 50px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
+  }
+  div.col-md-9{
+    float: right;
   }
   .col-md-12 {
     width: 100%;
@@ -1959,9 +1963,6 @@ pre code {
   }
   .col-md-5 {
     width: 41.66666667%;
-  }
-  .col-md-4 {
-    width: 33.33333333%;
   }
   .col-md-3 {
     width: 25%;
@@ -2095,7 +2096,7 @@ pre code {
     float: left;
   }
   .col-lg-12 {
-    width: 100%;
+    width: 50%;
   }
   .col-lg-11 {
     width: 91.66666667%;
@@ -2548,9 +2549,9 @@ output {
 }
 .form-control {
   display: block;
-  width: 100%;
+  width: 34px;
   height: 34px;
-  padding: 6px 12px;
+  padding: 6px 6px;
   font-size: 14px;
   line-height: 1.42857143;
   color: #555;
@@ -3975,6 +3976,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  background-color: #000;
 }
 .nav > li {
   position: relative;
@@ -3988,7 +3990,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eee;
+  background-color: none;
 }
 .nav > li.disabled > a {
   color: #777;
@@ -4272,7 +4274,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-width: 1px 0 0;
 }
 .navbar-brand {
-  float: left;
   height: 50px;
   padding: 15px 15px;
   font-size: 18px;
@@ -4921,13 +4922,13 @@ a.label:focus {
   white-space: nowrap;
   vertical-align: middle;
   background-color: #777;
-  border-radius: 10px;
+  border-radius: 10px; 
 }
 .badge:empty {
   display: none;
 }
 .btn .badge {
-  position: relative;
+  position: absolute;
   top: -1px;
 }
 .btn-xs .badge,
@@ -5454,6 +5455,7 @@ button.list-group-item-danger.active:focus {
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
           box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  height: 100%;
 }
 .panel-body {
   padding: 15px;
@@ -6511,6 +6513,46 @@ button.close {
 .modal-footer:after {
   clear: both;
 }
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  display: none;
+  background-color: #ededed;
+}
+.slideout-menu-left {
+  left: 0;
+}
+.slideout-menu-right {
+  right: 0;
+}
+.menu-section {
+    margin: 25px 0;
+    background-color: #f1f1f1;
+}
+.slideout-panel {
+  position: relative;
+  z-index: 10000;
+  will-change: transform;
+  background-color: #fff; /* A background-color is required */
+  min-height: 100vh;
+}
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+ overflow: hidden;
+}
+.slideout-open .slideout-menu {
+ display: block;
+}
+.menu-section {
+    margin: 25px 0;
+}
 .center-block {
   display: block;
   margin-right: auto;
@@ -6521,6 +6563,9 @@ button.close {
 }
 .pull-left {
   float: left !important;
+}
+.pull-up {
+  float: up !important;
 }
 .hide {
   display: none !important;

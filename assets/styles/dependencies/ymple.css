@@ -17,7 +17,6 @@
     position: relative;
     font-size: 16px;
     height: auto;
-    padding: 10px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -64,8 +63,7 @@
     -webkit-border-radius: 50%;
     border-radius: 0%;
 }
-.need-help
-{
+.need-help{
     margin-top: 10px;
 }
 .new-account
@@ -73,15 +71,16 @@
     display: block;
     margin-top: 10px;
 }
-
-
 .img-rounded-ymple {
-
     max-height: 250px;
     max-width: 250px;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .25s ease;
+    backface-visibility: hidden;
 }
-
-
 .ellipsis {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -91,16 +90,12 @@
     word-wrap: break-word;
     max-height: 60px;
 }
-
 .title-green{
-
     color:forestgreen
 }
-
 .navbar-ymple{
-
     font-size: 18px;
-    color:forestgreen;
+    color:black;
+    margin: auto;
+    display: block;
 }
-
-

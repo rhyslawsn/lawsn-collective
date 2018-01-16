@@ -1,20 +1,21 @@
 <%- include ../../core/commun/library.ejs %>
+<nav id="menu" class="menu slideout-menu slideout-menu-left">
+    <section class="menu-section">
+        Menu
+    </section>
+</nav>
+<main id="panel" class="panel slideout-panel slideout-panel-left">
+	<header class="panel-header">
+		<%- include ../../core/front/templates.navbar.ejs %>
 
-<%- include ../../core/front/templates.navbar.ejs %>
+		<br>
+		<%#= __('name_shop') %>
 
-<%- include ../../core/front/bar/category.ejs %>
-
-<br>
-<%#= __('name_shop') %>
-
-<div class="container" width="100%">
-
-    <%- include product/list.ejs %>
-
-
-</div>
-
-<%- include ../../core/front/bar/news-letter.ejs %>
+		<div class="container" width="100%">
+		    <%- include product/list.ejs %>
+		</div>
+	</header>
+</main>
 
 <%- include ../../core/front/layout %>
 
